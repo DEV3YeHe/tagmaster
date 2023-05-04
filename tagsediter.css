@@ -1,0 +1,19 @@
+.fileEntry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+p {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

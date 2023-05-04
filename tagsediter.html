@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>YeHe工具箱</title>
+    <style>
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .fileEntry {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 10px;
+      }
+
+      .fileEntry > * {
+        max-width: 200px;
+        max-height: 200px;
+        object-fit: contain;
+        margin-right: 10px;
+      }
+
+      .fileEntry > img {
+        max-width: 300px;
+        max-height: 300px;
+        object-fit: contain;
+        margin-right: 10px;
+      }
+
+      .fileEntry > p {
+        margin: 0;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      .fileEntry p {
+        display: flex;
+        align-items: flex-start;
+        margin-left: 10px; /* 为文本内容增加一些左侧的空白间距 */
+      }
+
+      .fileEntry > .number {
+        display: block;
+        font-size: 12px;
+        color: red;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      .enlarge {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .enlarge img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+      }
+
+      .enlarge .close-button {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>炼丹材料处理-字幕</h1>
+    <div>1.把训练图和配套的txt添加进来。</div>
+    <div>2.参照图片调整字幕txt，调整完可以点保存编辑来保存，会下载到浏览器默认下载目录，不会改原始的txt文件。可以复制过去覆盖。</div>
+    <div>3.还没有txt的图片可以在空白文本框里写然后保存。</div>
+    <div>4.别纠结工具的样式不好看，想改自己拿源码改。</div>
+    <a href="https://github.com/DEV3YeHe/tagmaster">Github</a>
+    <button id="addFilesButton">添加图片和字幕txt</button>
+    <div id="fileList"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
