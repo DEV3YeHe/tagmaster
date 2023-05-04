@@ -1,6 +1,8 @@
 const addFilesButton = document.getElementById("addFilesButton");
 const fileList = document.getElementById("fileList");
 const fileEntries = new Map();
+const addAllButton = document.getElementById("addAllButton");
+const textInput = document.getElementById("textInput");
 
 addFilesButton.addEventListener("click", () => {
   // 打开文件选择器
@@ -10,6 +12,18 @@ addFilesButton.addEventListener("click", () => {
   input.multiple = true;
   input.onchange = handleFiles;
   input.click();
+});
+
+addAllButton.addEventListener("click", () => {
+  const textToAdd = textInput.value;
+  if (textToAdd) {
+    // 获取当前页面所有的textarea元素
+    const textAreas = document.querySelectorAll("textarea");
+    textAreas.forEach((textArea) => {
+      // 在textarea的末尾插入新文本
+      textArea.value += textToAdd;
+    });
+  }
 });
 
 function handleFiles(event) {

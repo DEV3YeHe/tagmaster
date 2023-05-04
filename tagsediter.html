@@ -2,8 +2,13 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>YeHe工具箱</title>
+    <title>图片和字幕对比工具</title>
     <style>
+      textarea {
+        height: 300px;
+        width: 500px;
+        resize: both;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -86,8 +91,11 @@
     <div>2.参照图片调整字幕txt，调整完可以点保存编辑来保存，会下载到浏览器默认下载目录，不会改原始的txt文件。可以复制过去覆盖。</div>
     <div>3.还没有txt的图片可以在空白文本框里写然后保存。</div>
     <div>4.别纠结工具的样式不好看，想改自己拿源码改。</div>
-    <a href="https://github.com/DEV3YeHe/tagmaster">Github</a>
-    <button id="addFilesButton">添加图片和字幕txt</button>
+    <a href="">Github</a>
+    <button style="display: block;font-size: 16px;font-weight: bold;" id="addFilesButton">添加图片和字幕txt</button>
+    <label style="display: block;color:green;" for="textInput">辅助工具1：输入要添加的文本并向全部输入框中添加该文本</label>
+    <input type="text" id="textInput">
+    <button id="addAllButton">全部添加</button>
     <div id="fileList"></div>
     <script src="main.js"></script>
   </body>
